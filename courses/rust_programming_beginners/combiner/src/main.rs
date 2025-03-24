@@ -151,8 +151,8 @@ fn main() -> Result<(), ImageDataErrors>{
 
     output.set_data(combined)?;
 
-    // Fails here. Not sure why. Tried with same fotos. Don't know where none
-    //    is coming from.
+    // The output is fussy jpgs failed at first. ColorType Rgba8 doesn't work
+    //    Rgb8 seems to work for png
     if let Err(e) = image::save_buffer_with_format(
         output.name,
         &output.data,
