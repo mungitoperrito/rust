@@ -16,8 +16,10 @@ use std::io::{Write, BufReader, BufRead, ErrorKind};
 //     println!("Max f64: {}", f64::MAX);
 // }
 
-// Uncomment to see floats
+// Uncomment for rand num between 1, 100 (inclusive)
 fn main() {
-
+    // let random_num: i32 = rand::thread_rng().gen_range(1..101); // Deprecated
+    let random_num: i32 = rand::rng().random_range(1..101);
+    println!("Random: {}", random_num);
 }
 
