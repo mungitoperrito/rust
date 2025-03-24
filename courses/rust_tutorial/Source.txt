@@ -1,3 +1,6 @@
 Rust Tutorial Full Course
 
 https://www.youtube.com/watch?v=ygL_xcavzQ4
+
+NOTE: Auto suggest on demo screen might suggest things that break the
+demo code (e.g. around 10 minutes in, ln 13 & 14)
