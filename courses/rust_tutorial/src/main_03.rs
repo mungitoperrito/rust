@@ -16,10 +16,18 @@ use std::io::{Write, BufReader, BufRead, ErrorKind};
 //     println!("Max f64: {}", f64::MAX);
 // }
 
-// Uncomment for rand num between 1, 100 (inclusive)
+// Uncomment to see floats
 fn main() {
-    // let random_num: i32 = rand::thread_rng().gen_range(1..101); // Deprecated
-    let random_num: i32 = rand::rng().random_range(1..101);
-    println!("Random: {}", random_num);
+    let _ignore_this: f32 = 123.45;   // compiler ignores: underscore var name
+
+    let num_01: f32 = 1.111111111111111;
+    println!("f32: {}", num_01 + 0.1111111111111111 );
+    let num_02: f64 = 1.111111111111111;
+    println!("f64: {}", num_02 + 0.1111111111111111 );
+
+    let mut plus_plus: u32 = 1;
+
+    // println doesn't like increment at right
+    println!("{} {:?}", plus_plus, plus_plus);
 }
 
