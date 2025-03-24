@@ -25,14 +25,30 @@ use std::io::{Write, BufReader, BufRead, ErrorKind};
 //     }
 // }
 
-// Uncomment for ternary operator
-fn main(){
-    let mut age: u32 = 47;
-    let mut can_vote: bool = if age >= 18 {
-        true             // Return statement: not 'return', no ;
-    } else {
-        false            // Return statement: not 'return', no ;
-    };
 
-    println!("{}", can_vote);   // Variable needs a format string
+// // Uncomment for ternary operator
+// fn main(){
+//     let mut age: u32 = 47;
+//     let mut can_vote: bool = if age >= 18 {
+//         true             // Return statement: not 'return', no ;
+//     } else {
+//         false            // Return statement: not 'return', no ;
+//     };
+
+//     println!("{}", can_vote);   // Variable needs a format string
+// }
+
+
+// Uncomment for matching
+fn main() {
+    let ages = [0, 8, 18, 19, 21, 35, 50, 65, 80 ];
+
+    for age in ages  {
+        match age{
+            1..=18 => println!("{}: Important DBay", age),
+            21 | 50 => println!("{}: Important DBay", age),
+            65..=u32::MAX => println!("{}: Important DBay", age),
+            _ => println!("{}: Not important", age),
+        };
+    }
 }
