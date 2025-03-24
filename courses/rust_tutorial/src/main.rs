@@ -7,14 +7,27 @@ use std::io;
 use std::io::{Write, BufReader, BufRead, ErrorKind};
 
 
+// // Uncomment to see type sizes
+// fn main() {
+//     println!("Max u32: {}", u32::MAX);
+//     println!("Max u64: {}", u64::MAX);
+//     println!("Max usize: {}", usize::MAX);
+//     println!("Max f32: {}", f32::MAX);
+//     println!("Max f64: {}", f64::MAX);
+// }
+
+// Uncomment to see floats
 fn main() {
-    const ONE_MILLION: u32 = 1_000_000;
-    const PI: f32 = 3.141592;
-    let age: &str = "47";    // var has same name, different type: 'shadowing'
-    let mut age: u32 = age.trim().parse()
-        .expect("Age wasn't assigned a number");
-    age = age + 1;
+    let _ignore_this: f32 = 123.45;   // compiler ignores: underscore var name
 
-    println!("I'm {}. Give me: ${}", age, ONE_MILLION)  // Uses int age
+    let num_01: f32 = 1.111111111111111;
+    println!("f32: {}", num_01 + 0.1111111111111111 );
+    let num_02: f64 = 1.111111111111111;
+    println!("f64: {}", num_02 + 0.1111111111111111 );
 
+    let mut plus_plus: u32 = 1;
+
+    // println doesn't like increment at right
+    println!("{} {:?}", plus_plus, plus_plus);
 }
+
