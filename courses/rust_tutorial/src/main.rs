@@ -7,48 +7,42 @@ use std::io;
 use std::io::{Write, BufReader, BufRead, ErrorKind};
 
 
-// // Uncomment for if .. else if .. else
-// fn main() {
-//     // Need to learn typing for lists
-//     let ages = [0, 8, 18, 19, 21, 35, 50, 65, 80 ];
+// Uncomment for arrays
+fn main(){
+    let array_01: [i32; 4] = [1,2,3,4];
 
-//     for age in ages  {
-//         if (age >= 1) && (age <= 18) {
-//             println!("{}: Important BDay", age);
-//         } else if (age == 21) || (age == 50) {
-//             println!("{}: Important BDay", age);
-//         } else if (age >= 65) {
-//             println!("{}: Important BDay", age);
-//         } else {
-//             println!("{}: Not important", age);
-//         }
-//     }
-// }
+    // // Uncomment for an array
+    // println!("1st: {}", array_01[0]);
+    // println!("Length: {}", array_01.len());
+
+    // // Uncomment for a loop
+    // let array_02: [i32; 9] = [1,2,3,4,5,6,7,8,9];
+    // let mut idx: usize = 0;
+    // loop {
+    //     if array_02[idx] % 2 == 0 {
+    //         println!("{}", array_02[idx]);
+    //         idx += 1;
+    //     } else {
+    //         idx += 1;
+    //         continue;
+    //     }
+    //     if idx == 9 {
+    //         break;
+    //     }
+
+    // }
+
+    // // Uncomment for while loop
+    // let array_02: [i32; 9] = [1,2,3,4,5,6,7,8,9];
+    // let mut idx: usize = 0;
+    // while idx < array_02.len(){
+    //     println!("Array: {}", array_02[idx]);
+    //     idx += 1;
+    // }
 
 
-// // Uncomment for ternary operator
-// fn main(){
-//     let mut age: u32 = 47;
-//     let mut can_vote: bool = if age >= 18 {
-//         true             // Return statement: not 'return', no ;
-//     } else {
-//         false            // Return statement: not 'return', no ;
-//     };
-
-//     println!("{}", can_vote);   // Variable needs a format string
-// }
-
-
-// Uncomment for matching
-fn main() {
-    let ages = [0, 8, 18, 19, 21, 35, 50, 65, 80 ];
-
-    for age in ages  {
-        match age{
-            1..=18 => println!("{}: Important DBay", age),
-            21 | 50 => println!("{}: Important DBay", age),
-            65..=u32::MAX => println!("{}: Important DBay", age),
-            _ => println!("{}: Not important", age),
-        };
+    // Uncomment for for loop
+    for val in array_01.iter() {      // autocomplete suggestion val: &i32 fails
+        println!("Val: {}", val);
     }
 }
