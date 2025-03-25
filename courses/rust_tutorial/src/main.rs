@@ -32,11 +32,17 @@ fn main(){
 
     // }
 
-    // Uncomment for while loop
-    let array_02: [i32; 9] = [1,2,3,4,5,6,7,8,9];
-    let mut idx: usize = 0;
-    while idx < array_02.len(){
-        println!("Array: {}", array_02[idx]);
-        idx += 1;
+    // // Uncomment for while loop
+    // let array_02: [i32; 9] = [1,2,3,4,5,6,7,8,9];
+    // let mut idx: usize = 0;
+    // while idx < array_02.len(){
+    //     println!("Array: {}", array_02[idx]);
+    //     idx += 1;
+    // }
+
+
+    // Uncomment for for loop
+    for val in array_01.iter() {      // autocomplete suggestion val: &i32 fails
+        println!("Val: {}", val);
     }
 }
